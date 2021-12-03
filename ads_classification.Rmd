@@ -1,0 +1,62 @@
+# Clustering with R by Francis Gikaru Njeri
+
+# Kira Plastinina (Links to an external site.) is a Russian brand that is sold through a # defunct chain of retail stores in Russia, Ukraine, Kazakhstan, Belarus, China, #Philippines, and Armenia. The brand’s Sales and Marketing team would like to understand # their customer’s behavior from data that they have collected over the past year. More # specifically, they would like to learn the characteristics of customer groups.
+
+# Perform clustering stating insights drawn from your analysis and visualizations.
+# Upon implementation, provide comparisons between the approaches learned this week i.e. # K-Means clustering vs Hierarchical clustering highlighting the strengths and #limitations of each approach in the context of your analysis. 
+# Your findings should help inform the team in formulating the marketing and sales #strategies of the brand. 
+```{r}
+install.packages("caret")
+install.packages("corrplot")
+install.packages("clustvarsel")
+install.packages("mclust")
+install.packages("wskm")
+install.packages("cluster")
+install.packages("FSelector")
+```
+
+
+```{r}
+# calling libraries
+library(ggplot2)
+library(mclust)
+library(caret)
+library(corrplot)
+library(clustvarsel)
+library(wskm)
+library(cluster)
+library(FSelector)
+```
+
+```{r}
+# loading the data source
+df <-read.csv('/home/francis/Documents/R files/ads classification with R/online_shoppers_intention.csv')
+
+# previewing the dataset
+head(df)
+```
+```{r}
+# data cleaning
+# checking for null values
+colSums(is.na(df))
+```
+
+
+```{r}
+# dealing with the null values
+na.omit(df)
+```
+```{r}
+# summary of the numeric columns
+summary(df)
+```
+```{r}
+
+```
+
+Check the Data
+Perform Data Cleaning
+Perform Exploratory Data Analysis  (Univariate, Bivariate & Multivariate)
+Implement the Solution
+Challenge the Solution
+Follow up Questions
